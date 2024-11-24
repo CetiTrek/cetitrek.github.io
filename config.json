@@ -3,22 +3,7 @@
     "subTitle":"萌ICP备20242388号  (由于网站技术问题，暂无法在页脚正常添加MoeICP备案号，望谅解。)",
     "avatarUrl":"https://avatars.githubusercontent.com/u/155550730?v=4",
     "GMEEK_VERSION":"last",
-    "iconList":{"moe":"<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="16.000000pt" height="16.000000pt" viewBox="0 0 16.000000 16.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,16.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M50 122 c0 -13 -4 -20 -10 -17 -6 4 -8 11 -5 16 4 5 1 9 -4 9 -6 0
--10 -17 -10 -37 1 -21 3 -30 6 -20 5 19 42 20 55 2 5 -6 8 -5 8 3 0 19 38 14
-43 -5 3 -10 5 -1 6 20 0 20 -4 37 -10 37 -5 0 -8 -4 -4 -9 3 -5 1 -12 -5 -16
--6 -3 -10 4 -10 17 -1 22 -1 22 -15 4 -15 -20 -15 -20 -30 0 -14 18 -14 18
--15 -4z"/>
-<path d="M43 55 c-13 -10 -13 -14 -3 -20 22 -14 71 -11 83 4 9 12 9 13 0 7 -7
--4 -13 -3 -13 2 0 15 -48 20 -67 7z"/>
-</g>
-</svg>
-"},
+    "iconList":{"moe":"<svg version="1.0" xmlns="http://www.w3.org/2000/svg"width="16.000000pt" height="16.000000pt" viewBox="0 0 16.000000 16.000000"preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,16.000000) scale(0.100000,-0.100000)"fill="#000000" stroke="none"><path d="M50 122 c0 -13 -4 -20 -10 -17 -6 4 -8 11 -5 16 4 5 1 9 -4 9 -6 0-10 -17 -10 -37 1 -21 3 -30 6 -20 5 19 42 20 55 2 5 -6 8 -5 8 3 0 19 38 1443 -5 3 -10 5 -1 6 20 0 20 -4 37 -10 37 -5 0 -8 -4 -4 -9 3 -5 1 -12 -5 -16-6 -3 -10 4 -10 17 -1 22 -1 22 -15 4 -15 -20 -15 -20 -30 0 -14 18 -14 18-15 -4z"/><path d="M43 55 c-13 -10 -13 -14 -3 -20 22 -14 71 -11 83 4 9 12 9 13 0 7 -7-4 -13 -3 -13 2 0 15 -48 20 -67 7z"/></g></svg>"},
     "exlink":{"moe":"https://icp.gov.moe/?keyword=20242388"},
     "filingNum":"萌ICP备20242388号",
     "showPostSource":0
