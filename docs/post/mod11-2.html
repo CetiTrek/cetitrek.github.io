@@ -82,9 +82,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><h1>一篇文章带你搞懂mod 11-2算法</h1>
-<h2>阅前提示：本文章仅供研究学习使用(经测试，本文章暂无法正常阅读。)<sup><a href="#user-content-fn-1-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-1-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></h2>
-<h3>引语：mod 11-2算法目前广泛运用于各类加密场景，包括但不限于身份证最后一位的计算等。本文以身份证最后一位数字（校验码）的计算为例子，简单讲解mod 11-2算法。<sup><a href="#user-content-fn-2-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-2-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup></h3>
-<p>我国公民身份号码由十八位数字组成，大致可分割为以下几个部分<sup><a href="#user-content-fn-3-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-3-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">3</a></sup>：</p>
+<h2>阅前提示：本文章仅供研究学习使用(经测试，本文章暂无法正常阅读。)<sup><a href="#user-content-fn-1-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-1-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></h2>
+<h3>引语：mod 11-2算法目前广泛运用于各类加密场景，包括但不限于身份证最后一位的计算等。本文以身份证最后一位数字（校验码）的计算为例子，简单讲解mod 11-2算法。<sup><a href="#user-content-fn-2-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-2-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup></h3>
+<p>我国公民身份号码由十八位数字组成，大致可分割为以下几个部分<sup><a href="#user-content-fn-3-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-3-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">3</a></sup>：</p>
 <markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
@@ -121,9 +121,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </tr>
 </tbody>
 </table></markdown-accessiblity-table>
-<p>那这个“1”是怎么来的呢？先看下面一组国标规定的加权因子<sup><a href="#user-content-fn-4-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-4-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">4</a></sup>：</p>
+<p>那这个“1”是怎么来的呢？先看下面一组国标规定的加权因子<sup><a href="#user-content-fn-4-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-4-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">4</a></sup>：</p>
 <p><strong>7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2</strong></p>
-<p>这个因子的计算方法<sup><a href="#user-content-fn-2-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-2-2-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
+<p>这个因子的计算方法<sup><a href="#user-content-fn-2-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-2-2-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
 $$<br>
 2^{18-i} \bigoplus 11<br>
 $$<br>
@@ -139,12 +139,12 @@ $$<br>
 a_1,a_2,a_3,a_4...（a_1 = 28,a_2 = 36 ...）<br>
 $$<br>
 求和，得到数字<strong>b = 319</strong></p>
-<p>我们再将该数字套用到这样一个公式里<sup><a href="#user-content-fn-2-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-2-3-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
+<p>我们再将该数字套用到这样一个公式里<sup><a href="#user-content-fn-2-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-2-3-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
 $$<br>
 (12-(b\bigoplus11))\bigoplus11<br>
 $$<br>
 最后算出来的数字即为校验码。</p>
-<p>计算过程如下<sup><a href="#user-content-fn-2-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-2-4-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
+<p>计算过程如下<sup><a href="#user-content-fn-2-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-2-4-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
 $$<br>
 \because b = 319，\<br>
 \therefore b \bigoplus 11 = 319÷11的余数 = 0 \<br>
@@ -152,13 +152,13 @@ $$<br>
 \therefore 12÷11的余数 = 1 \<br>
 \therefore 校验码为1<br>
 $$<br>
-用一个函数写下来就是<sup><a href="#user-content-fn-2-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-2-5-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
+用一个函数写下来就是<sup><a href="#user-content-fn-2-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-2-5-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">2</a></sup>：<br>
 $$<br>
 m = (12-(\sum_{n=1}^{a_{17}}a_n \bigoplus 11))\bigoplus 11<br>
 $$<br>
 其中：<strong>a</strong>为每位原数字分别乘加权因子后的结果，<strong>m</strong>最终为校验码，<strong>n</strong>为每位数字的位数。</p>
 <p>用这个算法算出来的校验码，取值范围为0~10，其中10使用罗马数字“<strong>X</strong>”来表示。</p>
-<p>基于本算法制作的身份号码校验码推算程序（源代码）<sup><a href="#user-content-fn-5-be9d369eb1cc48020b1315438bde5c56" id="user-content-fnref-5-be9d369eb1cc48020b1315438bde5c56" data-footnote-ref="" aria-describedby="footnote-label">5</a></sup>：</p>
+<p>基于本算法制作的身份号码校验码推算程序（源代码）<sup><a href="#user-content-fn-5-2d3c4342348ab118c8e73f9c30d359db" id="user-content-fnref-5-2d3c4342348ab118c8e73f9c30d359db" data-footnote-ref="" aria-describedby="footnote-label">5</a></sup>：</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span>
 <span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
 <span class="pl-k">int</span> <span class="pl-en">main</span>(){
@@ -198,20 +198,20 @@ $$<br>
 </code></pre>
 <section data-footnotes="" class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
 <ol>
-<li id="user-content-fn-1-be9d369eb1cc48020b1315438bde5c56">
-<p>本文编写依据：ISO 7064:1983 <a href="#user-content-fnref-1-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+<li id="user-content-fn-1-2d3c4342348ab118c8e73f9c30d359db">
+<p>本文编写依据：ISO 7064:1983 <a href="#user-content-fnref-1-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
 </li>
-<li id="user-content-fn-2-be9d369eb1cc48020b1315438bde5c56">
-<p>由于编辑器限制，本文全文以⊕符号表取余，即取两数相除的余数 <a href="#user-content-fnref-2-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-2-2-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 2-2" class="data-footnote-backref">↩<sup>2</sup></a> <a href="#user-content-fnref-2-3-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 2-3" class="data-footnote-backref">↩<sup>3</sup></a> <a href="#user-content-fnref-2-4-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 2-4" class="data-footnote-backref">↩<sup>4</sup></a> <a href="#user-content-fnref-2-5-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 2-5" class="data-footnote-backref">↩<sup>5</sup></a></p>
+<li id="user-content-fn-2-2d3c4342348ab118c8e73f9c30d359db">
+<p>由于编辑器限制，本文全文以⊕符号表取余，即取两数相除的余数 <a href="#user-content-fnref-2-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a> <a href="#user-content-fnref-2-2-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 2-2" class="data-footnote-backref">↩<sup>2</sup></a> <a href="#user-content-fnref-2-3-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 2-3" class="data-footnote-backref">↩<sup>3</sup></a> <a href="#user-content-fnref-2-4-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 2-4" class="data-footnote-backref">↩<sup>4</sup></a> <a href="#user-content-fnref-2-5-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 2-5" class="data-footnote-backref">↩<sup>5</sup></a></p>
 </li>
-<li id="user-content-fn-3-be9d369eb1cc48020b1315438bde5c56">
-<p><a href="https://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D75D5FD3A7E05397BE0A0AB82A">信息来源：全国标准信息公共服务平台</a> <a href="#user-content-fnref-3-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+<li id="user-content-fn-3-2d3c4342348ab118c8e73f9c30d359db">
+<p><a href="https://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D75D5FD3A7E05397BE0A0AB82A">信息来源：全国标准信息公共服务平台</a> <a href="#user-content-fnref-3-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
 </li>
-<li id="user-content-fn-4-be9d369eb1cc48020b1315438bde5c56">
-<p>数据来源：自己算的( <a href="#user-content-fnref-4-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a></p>
+<li id="user-content-fn-4-2d3c4342348ab118c8e73f9c30d359db">
+<p>数据来源：自己算的( <a href="#user-content-fnref-4-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a></p>
 </li>
-<li id="user-content-fn-5-be9d369eb1cc48020b1315438bde5c56">
-<p>程序代码由本人临时编写，所以代码尚未规范 <a href="#user-content-fnref-5-be9d369eb1cc48020b1315438bde5c56" data-footnote-backref="" aria-label="Back to reference 5" class="data-footnote-backref">↩</a></p>
+<li id="user-content-fn-5-2d3c4342348ab118c8e73f9c30d359db">
+<p>程序代码由本人临时编写，所以代码尚未规范 <a href="#user-content-fnref-5-2d3c4342348ab118c8e73f9c30d359db" data-footnote-backref="" aria-label="Back to reference 5" class="data-footnote-backref">↩</a></p>
 </li>
 </ol>
 </section></div>
